@@ -9,7 +9,6 @@ import org.smart4j.chapter1.service.CustomerService;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 /**
  * Created by 陈亮 on 2016/11/22.
@@ -17,8 +16,8 @@ import java.util.Objects;
 public class CustomServiceTest {
     private final CustomerService customerService;
 
-    public CustomServiceTest(CustomerService customerService) {
-        this.customerService = customerService;
+    public CustomServiceTest() {
+        customerService=new CustomerService();
     }
 
     @Before
