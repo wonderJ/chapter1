@@ -7,7 +7,7 @@ public class Customer {
     private int id;
     private String name;
     private String contact;
-    private String telphone;
+    private String telephone;
     private String email;
     private String remark;
     private String del_flag;
@@ -52,12 +52,12 @@ public class Customer {
         this.remark = remark;
     }
 
-    public String getTelphone() {
-        return telphone;
+    public String gettelephone() {
+        return telephone;
     }
 
-    public void setTelphone(String telphone) {
-        this.telphone = telphone;
+    public void settelephone(String telephone) {
+        this.telephone = telephone;
     }
 
     public String getDel_flag() {

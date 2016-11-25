@@ -3,6 +3,7 @@ package org.smart4j.chapter1;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.smart4j.chapter1.helper.DatabaseHelper;
 import org.smart4j.chapter1.model.Customer;
 import org.smart4j.chapter1.service.CustomerService;
 
@@ -21,8 +22,9 @@ public class CustomServiceTest {
     }
 
     @Before
-    public void init(){
-
+    public void init() throws Exception{
+        String file="sql/customer_init.sql";
+        DatabaseHelper.executeSqlFile(file);
     }
 
     @Test
@@ -46,13 +48,13 @@ public class CustomServiceTest {
         fieldMap.put("telephone","11313122555");
         fieldMap.put("email","1565888@qq.com");
         fieldMap.put("remark","讲课时发生");
-        boolean result=customerService.createCustomer(fieldMap);
+        boolean result=customerService. createCustomer(fieldMap);
         Assert.assertTrue(result);
     }
 
     @Test
     public void deleteCustomerTest() throws Exception{
-        int id=1;
+        int id=2;
         boolean result=customerService.deleteCustomer(id);
         Assert.assertTrue(result);
     }
