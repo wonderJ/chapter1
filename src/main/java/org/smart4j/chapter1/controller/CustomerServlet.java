@@ -15,7 +15,7 @@ import java.util.List;
  * Created by 陈亮 on 2016/11/22.
  * 进入客户端页面
  */
-@WebServlet("/customer")
+@WebServlet("")
 public class CustomerServlet extends HttpServlet{
     private CustomerService customerService;
 
